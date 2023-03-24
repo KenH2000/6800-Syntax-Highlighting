@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+<language _name="Assembler (6800)" version="1.0" _section="Script" globs="*.asm" mimetypes="text/x-asm;text/x-assembler">
+
+	<escape-char>\</escape-char>
+
+	<line-comment _name = "Line Comment" style= "Comment">
+		<start-regex>;</start-regex>
+	</line-comment>
+
+	<block-comment _name = "Block Comment" style = "Comment">
+		<start-regex>/\*</start-regex>
+        	<end-regex>\*/</end-regex>
+	</block-comment>
+
+	<string _name = "NASM Identifiers" style = "Keyword" end-at-line-end = "TRUE">
+		<start-regex>\[</start-regex>
+		<end-regex>\]</end-regex>
+	</string>
+
+	<pattern-item _name = "Operators" style = "Operator">
+		<regex>[-.,:\+\*\/\(\)\{\}\[]|]</regex>
+	</pattern-item>
+
+	<pattern-item _name = "Label" style = "Preprocessor">
+		<regex>^[A-Za-z_][A-Za-z_0-9]*\:</regex>
+	</pattern-item>
+
+	<pattern-item _name = "Local Label" style = "Preprocessor">
+		<regex>.[A-Za-z_0-9]*\:</regex>
+	</pattern-item>
+
+	<string _name = "String" style = "String" end-at-line-end = "TRUE">
+		<start-regex>&quot;</start-regex>
+		<end-regex>&quot;</end-regex>
+	</string>
+    
+    <keyword-list _name = "Assembler Cmds" style = "Preprocessor"
+    	case-sensitive="TRUE"
+    	match-empty-string-at-beginning = "TRUE"
+    	match-empty-string-at-end = "TRUE">
+    	
+    	<keyword>format</keyword>
+    	<keyword>as</keyword>
+    	<keyword>use16</keyword>
+    	<keyword>use32</keyword>
+    	<keyword>use64</keyword>
+    	
+    	<keyword>equ</keyword>
+    	<keyword>times</keyword>
+    	<keyword>if</keyword>
+    	<keyword>repeat</keyword>
+    	<keyword>while</keyword>
+    	<keyword>end</keyword>
+    	<keyword>break</keyword>
+    	
+    	<keyword>display</keyword>
+    	<keyword>err</keyword>
+    	
+    	<keyword>include</keyword>
+    	<keyword>macro</keyword>
+    	<keyword>align</keyword>
+    	
+    	<keyword>db</keyword> <keyword>du</keyword>
+    	<keyword>dw</keyword>
+    	<keyword>dd</keyword>
+    	<keyword>dq</keyword>
+    	
+    	<keyword>rb</keyword>
+    	<keyword>rw</keyword>
+    	<keyword>rd</keyword>
+    	<keyword>rq</keyword>
+
+    
+    </keyword-list>
+    
+    <keyword-list _name = "Assembler Cmds #2" style = "Preprocessor"
+    	case-sensitive="FALSE"
+    	match-empty-string-at-beginning = "TRUE"
+    	match-empty-string-at-end = "TRUE">
+    	
+        <keyword>org</keyword>
+    	<keyword>short</keyword>
+    	<keyword>near</keyword>
+    	<keyword>far</keyword>
+    	
+    	<keyword>byte</keyword>
+    	<keyword>word</keyword>
+    	<keyword>dword</keyword>
+    	<keyword>qword</keyword>
+    	
+    </keyword-list>
+    
+    <keyword-list _name = "Instructions" style = "Keyword" case-sensitive="FALSE"
+    	match-empty-string-at-beginning = "TRUE"
+    	match-empty-string-at-end = "TRUE">
+    	
+    	
+    	<!-- Motorola 6800 instructions -->
+<keyword>lda</keyword>
+<keyword>ldb</keyword>
+<keyword>sta</keyword>
+<keyword>stb</keyword>
+
+<keyword>addb</keyword>
+<keyword>aba</keyword>
+<keyword>adca</keyword>
+<keyword>adcb</keyword>
+<keyword>anda</keyword>
+<keyword>andb</keyword>
+<keyword>bita</keyword>
+<keyword>bitb</keyword>
+<keyword>clr</keyword>
+<keyword>clra</keyword>
+<keyword>clrb</keyword>
+<keyword>cmpa</keyword>
+<keyword>cmpb</keyword>
+<keyword>cba</keyword>
+<keyword>com</keyword>
+<keyword>coma</keyword>
+<keyword>comb</keyword>
+<keyword>neg</keyword>
+<keyword>nega</keyword>
+<keyword>negb</keyword>
+<keyword>daa</keyword>
+<keyword>dec</keyword>
+<keyword>deca</keyword>
+<keyword>decb</keyword>
+<keyword>eora</keyword>
+<keyword>eorb</keyword>
+<keyword>inc</keyword>
+<keyword>inca</keyword>
+<keyword>incb</keyword>
+<keyword>ldaa</keyword>
+<keyword>ldab</keyword>
+<keyword>oraa</keyword>
+<keyword>orab</keyword>
+<keyword>psha</keyword>
+<keyword>pshb</keyword>
+<keyword>pula</keyword>
+<keyword>pulb</keyword>
+<keyword>rol</keyword>
+<keyword>rola</keyword>
+<keyword>rolb</keyword>
+<keyword>ror</keyword>
+<keyword>rora</keyword>
+<keyword>rorb</keyword>
+<keyword>asl</keyword>
+<keyword>asla</keyword>
+<keyword>aslb</keyword>
+<keyword>asr</keyword>
+<keyword>asra</keyword>
+<keyword>asrb</keyword>
+<keyword>lsr</keyword>
+<keyword>lsra</keyword>
+<keyword>lsrb</keyword>
+<keyword>staa</keyword>
+<keyword>stab</keyword>
+<keyword>suba</keyword>
+<keyword>subb</keyword>
+<keyword>sba</keyword>
+<keyword>sbca</keyword>
+<keyword>sbcb</keyword>
+<keyword>tab</keyword>
+<keyword>tba</keyword>
+<keyword>tst</keyword>
+<keyword>tsta</keyword>
+<keyword>tstb</keyword>
+<keyword>cpx</keyword>
+<keyword>dex</keyword>
+<keyword>des</keyword>
+<keyword>inx</keyword>
+<keyword>ins</keyword>
+<keyword>ldx</keyword>
+<keyword>lds</keyword>
+<keyword>stx</keyword>
+<keyword>sts</keyword>
+<keyword>txs</keyword>
+<keyword>tsx</keyword>
+<keyword>bra</keyword>
+<keyword>bcc</keyword>
+<keyword>bcs</keyword>
+<keyword>beq</keyword>
+<keyword>bge</keyword>
+<keyword>bgt</keyword>
+<keyword>bhi</keyword>
+<keyword>ble</keyword>
+<keyword>bls</keyword>
+<keyword>blt</keyword>
+<keyword>bmi</keyword>
+<keyword>bne</keyword>
+<keyword>bvc</keyword>
+<keyword>bvs</keyword>
+<keyword>bpl</keyword>
+<keyword>bsr</keyword>
+<keyword>jmp</keyword>
+<keyword>jsr</keyword>
+<keyword>nop</keyword>
+<keyword>rti</keyword>
+<keyword>rts</keyword>
+<keyword>swi</keyword>
+<keyword>wai</keyword>
+<keyword>clc</keyword>
+<keyword>cli</keyword>
+<keyword>clv</keyword>
+<keyword>sec</keyword>
+<keyword>sei</keyword>
+<keyword>sev</keyword>
+<keyword>tap</keyword>
+<keyword>tpa</keyword>
+
+
+    </keyword-list>
+    	
+	<keyword-list _name = "Registers" style = "Data Type" case-sensitive="FALSE"
+		match-empty-string-at-beginning = "TRUE"
+		match-empty-string-at-end = "TRUE">
+		
+    <keyword>zzz</keyword>
+	</keyword-list>
+    
+	<string _name = "Character Constant" style = "Character">
+	    <start-regex>\'</start-regex>
+	    <end-regex>\'</end-regex>
+	</string>
+
+	<pattern-item _name = "Decimal" style = "Decimal">
+		<regex>\b([1-9][0-9]*|0)([Uu]([Ll]|LL|ll)?|([Ll]|LL|ll)[Uu]?)?\b</regex>
+	</pattern-item>
+
+	<pattern-item _name = "Floating Point Number" style = "Floating Point">
+		<regex>\b([0-9]+[Ee][-]?[0-9]+|([0-9]*\.[0-9]+|[0-9]+\.)([Ee][-]?[0-9]+)?)[fFlL]?</regex>
+	</pattern-item>
+
+	<pattern-item _name = "Direct Number" style = "sh:variable" >
+        <regex>\#\$[0-9a-fA-F]*</regex>
+	</pattern-item>
+
+	<pattern-item _name = "Hex Number" style = "Base-N Integer" >
+        <regex>\$[0-9a-fA-F]*</regex>
+	</pattern-item>
+
+
+
+</language>
+
