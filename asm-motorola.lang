@@ -39,7 +39,15 @@
     	case-sensitive="TRUE"
     	match-empty-string-at-beginning = "TRUE"
     	match-empty-string-at-end = "TRUE">
-    	
+        <keyword>opt</keyword>
+    	<keyword>bsz</keyword>
+    	<keyword>fcb</keyword>
+    	<keyword>fcc</keyword>
+    	<keyword>fdb</keyword>
+    	<keyword>fill</keyword>
+    	<keyword>rmb</keyword>
+    	<keyword>zmb</keyword>
+
     	<keyword>format</keyword>
     	<keyword>as</keyword>
     	<keyword>use16</keyword>
@@ -61,7 +69,8 @@
     	<keyword>macro</keyword>
     	<keyword>align</keyword>
     	
-    	<keyword>db</keyword> <keyword>du</keyword>
+    	<keyword>db</keyword>
+        <keyword>du</keyword>
     	<keyword>dw</keyword>
     	<keyword>dd</keyword>
     	<keyword>dq</keyword>
@@ -244,4 +253,3 @@
 
 
 </language>
-
