@@ -1,5 +1,5 @@
 # 6800-Syntax-Highlighting
-<b>Motorola 6800 Assembly Highlighting lang files for GTKSourceView-3.0 and Ace code editor</b>
+<b>Motorola 6800 Assembly Highlighting files for GTKSourceView-3.0 and Ace code editor</b>
 
 This is an assembly language syntax highlighting file for editors that use GTKSourceView-3.0 (for example, xed), for Motorola 6800 Assembly Code.  The file can be added to your /.local/share/gtksourceview-3.0/language-specs/ folder.
 
