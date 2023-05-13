@@ -7,7 +7,7 @@
 	<line-comment _name = "Line Comment" style= "Comment">
 		<start-regex>;</start-regex>
 	</line-comment>
-	
+
 	<line-comment _name = "Line Comment2" style= "Comment">
 		<start-regex>^\*</start-regex>
 	</line-comment>
